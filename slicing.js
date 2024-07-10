@@ -1,0 +1,1 @@
+alert(prompt("You have written: ").slice(0,140));
