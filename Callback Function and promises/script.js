@@ -49,69 +49,80 @@
 
 
 // Promise chaining
-const asycFunc1 = () => {
+// const asycFunc1 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data1");
+//             resolve("success")
+//         }, 2000);
+//     })
+// }
+
+// const asycFunc2 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data2");
+//             resolve("success")
+//         }, 2000);
+//     })
+// }
+// const asycFunc3 = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log("Data3");
+//             resolve("Success");
+//         }, 2000);
+//     })
+// }
+
+// console.log("Fetching data1.....")
+// asycFunc1().then((res) => {
+//     console.log("Fetching data2.....")
+//     asycFunc2().then((res) => {
+//         console.log("Fetching data3.....")
+//         asycFunc3().catch(() => {
+//         })
+//     })
+// })
+
+
+
+
+
+
+// Another example of promises
+function getData(dataId) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("Data1");
+            console.log("data", dataId)
             resolve("success")
         }, 2000);
     })
 }
 
-const asycFunc2 = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Data2");
-            resolve("success")
-        }, 2000);
-    })
-}
-const asycFunc3 = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            console.log("Data3");
-            resolve("Success");
-        }, 2000);
-    })
-}
-
-console.log("Fetching data1.....")
-asycFunc1().then((res) => {
-    console.log("Fetching data2.....")
-    asycFunc2().then((res) => {
-        console.log("Fetching data3.....")
-        asycFunc3().catch(() => {
-        })
-    })
+console.log("Fetching data1....")
+getData(1).then(() => {
+    console.log("Fetching data2....")
+    return getData(2);
+}).then(() => {
+    console.log("Fetching data3....")
+    return getData(3)
+}).then((res) => {
+    console.log(res);
 })
-
-
-
 
 
 
 // Another example of callback
 
-// function getData(dataId, getNextData) {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             console.log("data", dataId)
-//             resolve("succeded")
-//             if (getNextData) {
-//                 getNextData();
-//             }
-//         }, 5000);
-//     })
-// }
-
 // We called this code callback hell because of to much difficult to understand
 // getData(1, () => {
 //     console.log("Getting data2.....")
 //     getData(2, () => {
-//         console.log("Getting data3.....")
-//         getData(3, () => {
-//             console.log("Getting data4.....")
-//             getData(4);
-//         })
+    //         console.log("Getting data3.....")
+    //         getData(3, () => {
+        //             console.log("Getting data4.....")
+        //             getData(4);
+        //         })
 //     });
 // })
