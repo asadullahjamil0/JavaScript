@@ -24,10 +24,15 @@
 // const date = new Date();
 // console.log(date);
 // Way - 2
-const formatDate = (date = new Date()) => {
-    days = date.getDate();
-    month = date.getMonth() + 1;
-    year = date.getFullYear();
-    console.log(`${days}/${month}/${year}`)
-}
-formatDate();
+// const formatDate = (date = new Date()) => {
+//     days = date.getDate();
+//     month = date.getMonth() + 1;
+//     year = date.getFullYear();
+//     console.log(`${days}/${month}/${year}`)
+// }
+// formatDate();
+
+// exercise - 5
+const addNew = (str) => str.indexOf("New1") === 0 ? str : `New! ${str}`;
+
+console.log(addNew("New! Asadullah"))
