@@ -19,3 +19,6 @@
 // let result = text.replace("asadullah","Lion")
 // console.log(result);
 
+// Exercise - 4
+const date = new Date();
+console.log(date);
