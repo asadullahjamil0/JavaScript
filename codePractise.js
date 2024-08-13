@@ -20,5 +20,14 @@
 // console.log(result);
 
 // Exercise - 4
-const date = new Date();
-console.log(date);
+// Way - 1
+// const date = new Date();
+// console.log(date);
+// Way - 2
+// const formatDate = (date = new Date()) => {
+//     days = date.getDate();
+//     month = date.getMonth();
+//     year = date.getFullYear();
+//     console.log(`${days}/${month}/${year}`)
+// }
+// formatDate();
