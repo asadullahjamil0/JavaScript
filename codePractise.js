@@ -24,10 +24,10 @@
 // const date = new Date();
 // console.log(date);
 // Way - 2
-// const formatDate = (date = new Date()) => {
-//     days = date.getDate();
-//     month = date.getMonth();
-//     year = date.getFullYear();
-//     console.log(`${days}/${month}/${year}`)
-// }
-// formatDate();
+const formatDate = (date = new Date()) => {
+    days = date.getDate();
+    month = date.getMonth() + 1;
+    year = date.getFullYear();
+    console.log(`${days}/${month}/${year}`)
+}
+formatDate();
