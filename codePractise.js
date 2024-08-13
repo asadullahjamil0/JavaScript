@@ -5,5 +5,17 @@
 
 
 // Exercise - 2
-const toGetExtension = (str) => str.slice(str.lastIndexOf("."));
-console.log(toGetExtension("script.js"));
+// const toGetExtension = (str) => str.slice(str.lastIndexOf("."));
+// console.log(toGetExtension("script.js"));
+
+
+// Exercise - 3
+// Way - 1
+// let str1 = prompt("write first word")
+// let str2 = prompt("Write second word")
+// console.log(str1.replace(str1,str2))
+// Way - 2
+// let text = "Hey i am asadullah";
+// let result = text.replace("asadullah","Lion")
+// console.log(result);
+
