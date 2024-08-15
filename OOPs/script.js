@@ -43,3 +43,6 @@ console.log(a);
 
 let l = new lion("Shera")
 console.log(l);
+
+// Method to check if l is made up by class animal
+l instanceof Animal;
