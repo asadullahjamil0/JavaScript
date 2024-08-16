@@ -1,6 +1,11 @@
-let num = [1, 2, 3, 4, 5, 6, 7, 8]
+let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 9]
 let double = []
+let set = new Set();
+
 for (const number of num) {
-    double.push(number * 2);
+    if (!set.has(number)) {
+        double.push(number * 2)
+        set.add(number)
+    }
 }
 console.log(double)
