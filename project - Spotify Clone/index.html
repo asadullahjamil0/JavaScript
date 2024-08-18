@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spotify – Web Player</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
 </head>
@@ -25,6 +25,12 @@
                     <h2>
                         Your Library
                     </h2>
+                </div>
+
+                <div class="songsList">
+                    <ul>
+                        <li>Songs name</li>
+                    </ul>
                 </div>
                 <div class="footer">
                     <div class="link-container"><a href="https://www.spotify.com/pk-en/legal/"><span>Legal</span></a>
@@ -60,28 +66,66 @@
                     </svg>
                 </div>
                 <div class="buttons">
-                    <button>Sign up</button>
-                    <button>Login in</button>
+                    <button class="signupBtn">Sign up</button>
+                    <button class="loginBtn">Log in</button>
                 </div>
             </div>
             <div class="spotifyPlaylists">
                 <h1>Spotify PlayList</h1>
                 <div class="cardContainer">
                     <div class="card">
+                        <div class="play">
+                            <div class="playButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                                        fill="black"></path>
+                                </svg>
+                            </div>
+
+                        </div>
                         <img src="https://i.scdn.co/image/ab67706f00000002c61f28bb8f3662ae8f720848" alt="">
                         <h2>Party Hits</h2>
                         <p>A mix of the biggest pop, dance, and hip hop party songs.</p>
                     </div>
 
                     <div class="card">
+                        <div class="play">
+                            <div class="playButton">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path
+                                        d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                                        fill="black"></path>
+                                </svg>
+                            </div>
+
+                        </div>
                         <img src="https://i.scdn.co/image/ab67706f00000002c61f28bb8f3662ae8f720848" alt="">
                         <h2>Party Hits</h2>
                         <p>A mix of the biggest pop, dance, and hip hop party songs.</p>
+                    </div>
+
+
+                </div>
+                <div class="playBar">
+                    <div class="songInfo">
+
+                    </div>
+                    <div class="songButtons">
+
+                        <img src="previous.svg" alt="">
+                        <img src="playButton.svg" alt="">
+                        <img src="next.svg" alt="">
+                    </div>
+                    <div class="songTime">
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

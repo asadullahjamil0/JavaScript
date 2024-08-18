@@ -42,3 +42,51 @@
 .white{
     fill: grey;
 }
+
+/* Apply smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Webkit Scrollbar Styling (for Chrome, Edge, and Safari) */
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #1a1a1a; /* Darker background for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3a3a3a; /* Slightly lighter black for thumb */
+    border-radius: 6px;
+    border: 2px solid #1a1a1a; /* Match track color to create an inset effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #5a5a5a; /* Lighten the thumb on hover */
+}
+
+/* Firefox Scrollbar Styling */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3a3a3a #1a1a1a; /* Thumb color and track color */
+}
+
+/* Edge and IE Scrollbar Styling */
+::-ms-scrollbar {
+    width: 12px;
+    background-color: #1a1a1a;
+}
+
+::-ms-scrollbar-thumb {
+    background-color: #3a3a3a;
+    border-radius: 6px;
+    border: 2px solid #1a1a1a;
+}
+
+::-ms-scrollbar-thumb:hover {
+    background-color: #5a5a5a;
+}
+
+/* Customize scrolling for all browsers */
+::-webkit-scrollbar-corner {
+    background-color: #1a1a1a;
+}
