@@ -18,22 +18,31 @@ async function getSongs() {
 }
 
 async function main() {
+    let currentSong;
+
     // Getting the list of all songs
     let songs = await getSongs()
-    console.log(songs)
 
+    // Show all the songs in the playlist
     let songsUL = document.querySelector(".songsList").getElementsByTagName("ul")[0];
     for (const song of songs) {
-        songsUL.innerHTML = songsUL.innerHTML + `<li> ${song.replaceAll("%20"," ")} </li>`;
+        songsUL.innerHTML = songsUL.innerHTML + `<li><img class="invert" src="music.svg" alt="">
+                            <div class="info">
+                                <div>${song.replaceAll("%20", " ")}</div>
+                                <div>Harry</div>
+                            </div>
+                            <div class="playNow">
+                                <span>Play Now</span>
+                                <img src="playButton.svg" alt="">
+                            </div></li>`;
     }
 
-    // Play the first song
-    var audio = new Audio(songs[0])
-    audio.play();
+    // Attach an event listener to each song
+    Array.from(document.querySelector(".songsList").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element => {
+            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+        })
+    });
 
-    audio.addEventListener("loadeddata", () => {
-        console.log(audio.duration, audio.src, audio.currentTime)
-    })
-    audio.pause();
 }
 main();
