@@ -1,4 +1,19 @@
 console.log("Let's write js");
+let currentSong = new Audio();
+
+function convertSecondsToMinutes(seconds) {
+    // Calculate the number of minutes
+    let minutes = Math.floor(seconds / 60);
+    // Calculate the remaining seconds
+    let remainingSeconds = Math.floor(seconds % 60);
+
+    // Format minutes and seconds to always have two digits
+    let formattedMinutes = String(minutes).padStart(2, '0');
+    let formattedSeconds = String(remainingSeconds).padStart(2, '0');
+
+    // Return the formatted time string
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
 
 async function getSongs() {
     let a = await fetch('http://127.0.0.1:3000/JavaSript/project%20-%20Spotify%20Clone/Songs/')
@@ -17,8 +32,16 @@ async function getSongs() {
     return songs;
 }
 
+const playMusic = (track) => {
+    // let audio = new Audio("/JavaSript/project%20-%20Spotify%20Clone/Songs/ " + track)
+    currentSong.src = "/JavaSript/project%20-%20Spotify%20Clone/Songs/" + track;
+    currentSong.play();
+    play.src = "pause.svg"
+    document.querySelector(".songInfo").innerHTML = track
+    document.querySelector(".songTime").innerHTML = "00:00 / 00:00"
+}
+
 async function main() {
-    let currentSong;
 
     // Getting the list of all songs
     let songs = await getSongs()
@@ -41,8 +64,25 @@ async function main() {
     Array.from(document.querySelector(".songsList").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
     });
 
+    // Attach an event listener to play,previous and next button
+    play.addEventListener("click", () => {
+        if (currentSong.paused) {
+            currentSong.play();
+            play.src = "pause.svg"
+        }
+        else {
+            currentSong.pause();
+            play.src = "musicButton.svg"
+        }
+    })
+
+    // listen for timeupdate event
+    currentSong.addEventListener("timeupdate", () => {
+        document.querySelector(".songTime").innerHTML = `${convertSecondsToMinutes(currentSong.currentTime)}/${convertSecondsToMinutes(currentSong.duration)}`
+    })
 }
 main();

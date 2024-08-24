@@ -234,3 +234,20 @@ body {
     left: 0%;
     transition: left 0.5s;
 }
+
+
+.songButtons img {
+    cursor: pointer;
+}
+
+.songInfo,
+.songTime {
+    color: black;
+    padding: 0px 12px;
+}
+
+.aboveBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
