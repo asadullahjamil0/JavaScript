@@ -68,3 +68,36 @@ const calcMod = arr_2.filter((val) => {
     return val % 2 === 0;
 })
 console.log(calcMod);
+
+// filter_function example
+let marks = [34, 56, 23, 94, 93, 89]
+const findMarks = marks.filter((val) => {
+    return val > 90;
+})
+console.log("congrate your marks are: " + findMarks)
+
+// Reduce function
+let arr_3 = [132, 203, 33, 4, 5, 6];
+const sumWithInitial = arr_3.reduce((prev, curr) => {
+    return prev > curr ? prev : curr;
+})
+console.log(sumWithInitial)
+
+// Some practise examples of functions
+let n = prompt("Enter your number: ")
+let arr_4 = [];
+for (let i = 1; i <= n; i++) {
+    arr_4[i - 1] = i;
+}
+console.log(arr_4)
+
+const sumAllNums = arr_4.reduce((prev, curr) => {
+    return prev + curr
+})
+console.log(sumAllNums)
+
+
+const multiAllNums = arr_4.reduce((prev, curr) => {
+    return prev * curr
+})
+console.log(multiAllNums)
