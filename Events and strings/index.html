@@ -43,20 +43,20 @@
         // altKey, ctrlKey, shiftKey, keyCode
 
 
-        // document.getElementById("images").addEventListener('click', function () {
-        //     console.log("All ul clicked")
-        // }, false)
+        document.getElementById("images").addEventListener('click', function () {
+            console.log("All ul clicked")
+        }, false)
 
-        // document.getElementById("lake").addEventListener('click', function (e) {
-        //     console.log("lake clicked")
-        //     e.stopPropagation();
-        // }, false)
+        document.getElementById("lake").addEventListener('click', function (e) {
+            console.log("lake clicked")
+            e.stopPropagation();
+        }, false)
 
-        // document.getElementById("google").addEventListener("click", function (e) {
-        //     console.log("google clicked");
-        //     e.preventDefault();
-        //     e.stopPropagation();
-        // }, false)
+        document.getElementById("google").addEventListener("click", function (e) {
+            console.log("google clicked");
+            e.preventDefault();
+            e.stopPropagation();
+        }, false)
 
         document.querySelector("#images").addEventListener("click", function (e) {
             if (e.target.tagName === "IMG") {
