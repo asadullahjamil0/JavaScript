@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events and strings</title>
 </head>
-<body>
-    
 
-    <script src="alert.js"></script>
+<body>
+    <h2>Random Images</h2>
+    <div>
+        <ul id="images" style="list-style-type: none;">
+            <li><img width="200px" id="lake"
+                    src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </li>
+            <li><img width="200px" id="bird"
+                    src="https://images.pexels.com/photos/36762/scarlet-honeyeater-bird-red-feathers.jpg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </li>
+            <li><img width="200px" id="mountain"
+                    src="https://images.pexels.com/photos/36478/amazing-beautiful-beauty-blue.jpg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </li>
+            <li><img width="200px" id="butterfly"
+                    src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </li>
+            <li><img width="200px" id="drop"
+                    src="https://images.pexels.com/photos/432786/pexels-photo-432786.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="">
+            </li>
+            <li><a id="google" href="https://www.google.com/">GOOGLE</a></li>
+
+        </ul>
+    </div>
+
+    <script>
+        // type, timestamp, default prevented
+        // target, toElement, scrElement, currentTarget
+        // clientX, clientY, screenX, screenY
+        // altKey, ctrlKey, shiftKey, keyCode
+
+
+        // document.getElementById("images").addEventListener('click', function () {
+        //     console.log("All ul clicked")
+        // }, false)
+
+        // document.getElementById("lake").addEventListener('click', function (e) {
+        //     console.log("lake clicked")
+        //     e.stopPropagation();
+        // }, false)
+
+        // document.getElementById("google").addEventListener("click", function (e) {
+        //     console.log("google clicked");
+        //     e.preventDefault();
+        //     e.stopPropagation();
+        // }, false)
+
+        document.querySelector("#images").addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                console.log(e.target.id)
+                let removeIt = e.target.parentNode;
+                removeIt.remove();
+            }
+        })
+        // removeIt.parentNode.removeChild(removeIt);
+    </script>
 </body>
+
 </html>
