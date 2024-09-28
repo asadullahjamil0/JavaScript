@@ -1,0 +1,10 @@
+{
+    "name": "Asadullah",
+    "Age": 34,
+    "isLoggedIn": true,
+    "shotItem": [
+        "Food",
+        "choclate",
+        "Bread"
+    ]
+}
