@@ -50,3 +50,9 @@ let multiLine = `hey how are you
 I am fine how are you
 i am good to `;
 console.log(multiLine);
+
+// String[index] access
+let stringName = "Asadullah jamil";
+for (let i = 0; i < stringName.length; i++) {
+    console.log(stringName[i]);
+}
