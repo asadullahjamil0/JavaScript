@@ -42,8 +42,12 @@ let toyota = new car();
 
 
 let cars = [
-    { Name: "Bilal", Age: 21,School:"Leads School",teacherName : "Jhangir" },
+    { Name: "Bilal", Age: 21, School: "Leads School", teacherName: "Jhangir" },
     { make: "Ford", model: "F-150" },
     { make: "Tesla", model: "Model S" }
 ];
+const filterTeacher = cars.filter((word) => {
+    word.length > 3;
+})
 console.log(cars);
+console.log(filterTeacher);
