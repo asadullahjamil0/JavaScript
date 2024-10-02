@@ -39,3 +39,11 @@ class car {
 let fortuner = new car();
 fortuner.brandName(23);
 let toyota = new car();
+
+
+let cars = [
+    { Name: "Bilal", Age: 21,School:"Leads School",teacherName : "Jhangir" },
+    { make: "Ford", model: "F-150" },
+    { make: "Tesla", model: "Model S" }
+];
+console.log(cars);
