@@ -47,7 +47,7 @@ let cars = [
     { make: "Tesla", model: "Model S" }
 ];
 const filterTeacher = cars.filter((word) => {
-    word.length > 3;
+    return word.teacherName == "Jhangir";
 })
 console.log(cars);
 console.log(filterTeacher);
