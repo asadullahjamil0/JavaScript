@@ -56,3 +56,34 @@ let stringName = "Asadullah jamil";
 for (let i = 0; i < stringName.length; i++) {
     console.log(stringName[i]);
 }
+
+//some() method
+let ages = [12, 45, 23, 13, 28, 18]
+
+const checkSome = ages.some(checkAdult);
+function checkAdult(age) {
+    return age >= 18;
+}
+console.log(checkSome);
+
+// indexOf method
+let result = ages.indexOf(23, 0)
+document.write(result + "<br></br>")
+
+//lastIndexOf method
+let result_1 = ages.lastIndexOf(45, 4)
+document.write(result_1 + "<br></br>")
+
+let personalDetails = JSON.parse(`{"name":"AsadUllah","Age":23,"City":"Sheikhupura"}`);
+document.write(personalDetails.name);
+
+let myDate = new Date();
+console.log(myDate.toLocaleString());
+// Date.now() method
+const minute = 1000 * 60;
+const hour = minute * 60;
+const day = hour * 24;
+const month = day * 30;
+const year = day * 365;
+let myTimeSwamp = Math.floor(Date.now() / year);
+console.log(myTimeSwamp);
