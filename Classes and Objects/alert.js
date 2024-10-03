@@ -40,14 +40,22 @@ let fortuner = new car();
 fortuner.brandName(23);
 let toyota = new car();
 
-
+// objects in an array
 let cars = [
-    { Name: "Bilal", Age: 21, School: "Leads School", teacherName: "Jhangir" },
-    { make: "Ford", model: "F-150" },
-    { make: "Tesla", model: "Model S" }
+    { Name: "Bilal", Age: 22, School: "Leads School", teacherName: "Jhangir", email: "jhangir@189gmail.com" },
+    { Name: "Hassan", Age: 23, School: "National School", teacherName: "Mehtab", email: "mehtab23@gmail.com" },
+    { Name: "Arslan", Age: 22, School: "Wisdom House School", teacherName: "Khalid", email: "khalid567@gmail.com" },
+    { Name: "Moiz", Age: 21, School: "National School", teacherName: "Mehmood", email: "mehmood54@gmail.com" },
+    { Name: "Hamza", Age: 23, School: "Wisdom House School", teacherName: "Mehtab", email: "mehtab23@gmail.com" },
+    { Name: "Awais", Age: 22, School: "Leads School", teacherName: "Khalid", email: "khalid567@gmail.com" },
+    { Name: "Nouman", Age: 21, School: "Wisdom House School", teacherName: "Jhangir", email: "jhangir@189gmail.com" },
+    { Name: "Ihtisham", Age: 21, School: "National School", teacherName: "Mehmood", email: "mehmood54@gmail.com" },
+    { Name: "Husnain", Age: 23, School: "Leads School", teacherName: "Khalid", email: "khalid567@gmail.com" },
+    { Name: "Umer", Age: 22, School: "Wisdom House School", teacherName: "Jhangir", email: "jhangir@189gmail.com" },
 ];
+// filter method to filter someting from an array
 const filterTeacher = cars.filter((word) => {
-    return word.teacherName == "Jhangir";
+    return word.teacherName === "Jhangir" && word.email === "jhangir@189gmail.com";
 })
 console.log(cars);
 console.log(filterTeacher);
