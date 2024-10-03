@@ -55,7 +55,10 @@ let cars = [
 ];
 // filter method to filter someting from an array
 const filterTeacher = cars.filter((word) => {
-    return word.teacherName === "Jhangir" && word.email === "jhangir@189gmail.com";
+    return word.teacherName && word.email;
 })
 console.log(cars);
+for (let i = 0; i < cars.length; i++) {
+    console.log(filterTeacher[i].teacherName);
+}
 console.log(filterTeacher);
