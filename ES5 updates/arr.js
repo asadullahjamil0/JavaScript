@@ -32,4 +32,12 @@ let f = 23.43;
 document.write(Math.floor(f) + `<br> </br>`)
 // ceil - round towards its highest integer
 let i = 23.43;
-document.write(Math.ceil(i) + `<br> </br>`)
+document.write(Math.ceil(i) + `<br> </br>`);
+
+// Strings methods
+let text = "Hey i am Asadullah Jamil.";
+// startsWith method
+document.write(text.startsWith("Hey") + `<br> </br>`);
+// endsWith method
+document.write(text.endsWith("Jamil.") + `<br> </br>`);
+
