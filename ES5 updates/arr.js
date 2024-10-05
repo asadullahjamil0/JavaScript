@@ -41,3 +41,29 @@ document.write(text.startsWith("Hey") + `<br> </br>`);
 // endsWith method
 document.write(text.endsWith("Jamil.") + `<br> </br>`);
 
+//Object properties - objects is a collection of properties and properties are association with names(keys) and values.
+let student_1 = {
+    name: "AsadUllah Jamil",
+    Age: 23,
+    Education: "Computer Science"
+}
+document.write(student_1.name + `<br> </br>`);
+document.write(student_1.Education + `<br> </br>`);
+
+// Object method is an action which an object is able to perform
+let student_2 = {
+    name: "Mujahid",
+    Age: 34,
+    Education: "Chemistry"
+}
+
+//Object.assign
+Object.assign(student_1, student_2);
+document.write(student_1.name + ` this is after assign <br> </br>`);
+document.write(student_1.Education + ` this is after assign <br> </br>`);
+//Object.entries - returns keys/values of an object
+document.write(`These are entries of an object student_1 = ` + Object.entries(student_1) + `<br>`);
+//Object.keys - is similar to entries but it returns only keys 
+document.write(`These are keys of an object student_1 = ` + Object.keys(student_1 ) + `<br>`);
+//Object.values - is similar to entries but it returns only values 
+document.write(`These are values of an object student_1 = ` + Object.values(student_1) + `<br>`);
