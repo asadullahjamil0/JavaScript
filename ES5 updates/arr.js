@@ -18,4 +18,18 @@ function isPrime(element) {
     return true;
 }
 
-document.write([1, 2, 4, 5, 6, 8, 9].findIndex(isPrime));
+document.write([1, 2, 4, 5, 6, 8, 9].findIndex(isPrime) + `<br> </br>`);
+
+// Math methods
+//trunc - cuts away the decimal places
+let t = 65.443;
+document.write(Math.trunc(t) + `<br> </br>`)
+// round - round the integer to closest
+let r = 56.89;
+document.write(Math.round(r) + `<br> </br>`)
+// floor - round towards its lower integer
+let f = 23.43;
+document.write(Math.floor(f) + `<br> </br>`)
+// ceil - round towards its highest integer
+let i = 23.43;
+document.write(Math.ceil(i) + `<br> </br>`)
