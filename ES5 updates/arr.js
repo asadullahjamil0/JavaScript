@@ -54,7 +54,8 @@ document.write(student_1.Education + `<br> </br>`);
 let student_2 = {
     name: "Mujahid",
     Age: 34,
-    Education: "Chemistry"
+    Education: "Chemistry",
+    city : "Sheikhupura"
 }
 
 //Object.assign
