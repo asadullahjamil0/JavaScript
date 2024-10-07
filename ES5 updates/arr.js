@@ -55,7 +55,7 @@ let student_2 = {
     name: "Mujahid",
     Age: 34,
     Education: "Chemistry",
-    city : "Sheikhupura"
+    city: "Sheikhupura"
 }
 
 //Object.assign
@@ -65,6 +65,30 @@ document.write(student_1.Education + ` this is after assign <br> </br>`);
 //Object.entries - returns keys/values of an object
 document.write(`These are entries of an object student_1 = ` + Object.entries(student_1) + `<br>`);
 //Object.keys - is similar to entries but it returns only keys 
-document.write(`These are keys of an object student_1 = ` + Object.keys(student_1 ) + `<br>`);
+document.write(`These are keys of an object student_1 = ` + Object.keys(student_1) + `<br>`);
 //Object.values - is similar to entries but it returns only values 
 document.write(`These are values of an object student_1 = ` + Object.values(student_1) + `<br>`);
+
+// object getter in javaScript
+let employee = {
+    name: "AsadUllah",
+    Age: 22,
+    language: "en",
+    get lang() {
+        return this.language.toUpperCase();
+    }
+}
+document.write(employee.lang + `<br>`);
+
+// object setter
+let employee_1 = {
+    name: "Nouman",
+    Age: 23,
+    language: "",
+    set lang(lang) {
+        this.language = lang.toUpperCase();
+    }
+}
+
+employee_1.lang = "cn";
+document.write(employee_1.language + `<br>`)
