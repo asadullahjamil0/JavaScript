@@ -16,7 +16,7 @@ function convertSecondsToMinutes(seconds) {
 }
 
 async function getSongs() {
-    let a = await fetch('http://127.0.0.1:3000/JavaSript/project%20-%20Spotify%20Clone/Songs/')
+    let a = await fetch('http://127.0.0.1:5500/JavaSript/project%20-%20Spotify%20Clone/Songs/')
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -37,7 +37,7 @@ const playMusic = (track) => {
     currentSong.src = "/JavaSript/project%20-%20Spotify%20Clone/Songs/" + track;
     currentSong.play();
     play.src = "pause.svg"
-    document.querySelector(".songInfo").innerHTML = track
+    document.querySelector(".songInfo").innerHTML = track;
     document.querySelector(".songTime").innerHTML = "00:00 / 00:00"
 }
 
@@ -45,7 +45,7 @@ async function main() {
 
     // Getting the list of all songs
     let songs = await getSongs()
-
+ 
     // Show all the songs in the playlist
     let songsUL = document.querySelector(".songsList").getElementsByTagName("ul")[0];
     for (const song of songs) {
@@ -63,7 +63,7 @@ async function main() {
     // Attach an event listener to each song
     Array.from(document.querySelector(".songsList").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
-            console.log(e.querySelector(".info").firstElementChild.innerHTML)
+            // console.log(e.querySelector(".info").firstElementChild.innerHTML)
             playMusic(e.querySelector(".info").firstElementChild.innerHTML.trim())
         })
     });
@@ -72,11 +72,11 @@ async function main() {
     play.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play();
-            play.src = "pause.svg"
+            play.src = "pause.svg";
         }
         else {
             currentSong.pause();
-            play.src = "musicButton.svg"
+            play.src = "musicButton.svg";
         }
     })
 
