@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button
+        onclick="document.getElementById('myImage').src='https:w7.pngwing.com/pngs/176/1002/png-transparent-blue-light-bulb-illustration-incandescent-light-bulb-lamp-lighting-blue-light-bulb-light-fixture-blue-lights-thumbnail.png'">Turn
+        on the light</button>
+
+    <img id="myImage" src="pic_bulboff.gif" style="width:200px" height="300px">
+
+    <button
+        onclick="document.getElementById('myImage').src='https:w7.pngwing.com/pngs/351/294/png-transparent-incandescent-light-bulb-led-lamp-light-emitting-diode-lighting-a-light-bulb-turned-on-edison-bulb-light-fixture-angle-lights-thumbnail.png'">Turn
+        off the light</button>
+    <p id="demo_1">My Paragraph 1</p>
+    <p id="demo_2">My Paragraph 2</p>
+    <p id="demo_3">My Paragraph 3</p>
+    <button onclick="myFunction()">Click it!</button>
+
+
+    <script>
+        window.alert("Hey this is window alert pop up is activated");
+        function myFunction() {
+            document.getElementById("demo_1").innerHTML = "Yayy!! You clicked first paragraph!";
+            document.getElementById("demo_2").innerHTML = "Yayy!! You clicked second paragraph!";
+            document.getElementById("demo_3").innerHTML = "Yayy!! You clicked third paragraph!";
+        }
+
+    </script>
+    <script src="alert.js"></script>
+
+</body>
+
+</html>
